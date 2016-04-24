@@ -1,0 +1,66 @@
+
+Gulp - Auxiliando no desenvolvimento de aplicações front-end
+
+>Desenvolvimento de aplicações front-end
+	--O desenvolvimento usando javascript tem evoluído muito nos últimos anos, ele tem crescido de uma forma muito rápida  e cada vez mais tem sido adotado em grandes projetos web,
+mas não apenas no front-end no back-end também, e com isso a comunidade tem criado cada vez mais ferramentas para nos auxiliar nessa jornada, aqui eu pretendo falar sobre alguma delas
+focando no desenvolvimento pro front-end e claro no GulpJS
+	--Podemos dividir o desenvolvimento de aplicações front-end em 3 etapas
+	Verficar
+	Transformar
+	Empacotar
+	--Existem ferramentas criadas para nos auxiliar em cada uma dessas etapas
+
+>Verificar
+	--Na etapa de verificar por exemplo, podemos usar ferramentas de verificação de código como por exemplo o hint e o eslint
+	--Então você pode criar um script de verificação para alguma dessas ferramentas e usando o CLI do npm chamar ela para checar o seu código
+	--Tu também pode querer testes unitários na aplicação ou testes em cima de seus componentes (se for esse o caso), para isso tu pode usar uma ferramenta de execução 
+e verificação de testes, como por exemplo o karma, e outra para a criação dos testes unitários como o mocca
+	--Também existem ferramentas designadas para watch (como por exemplo o watchify) e de live-reload (live-reload, browsersync)
+	--Usando esses caras você não precisa ficar usando comandos sempre que modificar seu código, pode chamar eles e eles irão rodar as ferramentas de verificação 
+para você sempre que o código for alterado. 
+>Transformar
+	--Na etapa de transformar podemos encaixar ferramentas como o babel (que transforma ES6 para ES5, também é usada pelo react para transformar jsx em js)
+	--Então você cria um script para transformar o seu código em uma versão que os navegadres atuais entendam, mas você tem que rodar ele após a etapa das ferramentas de verificar,
+ou seja, verifica e depois transforma, então você roda ferramentas de verificar e depois transformar
+	--Aí a complexidade já aumenta
+>Empacotar
+	--Nessa fase podemos encaixar ferramentas de criação de bundle como por exemplo o browserify e o webpack
+	--Também podemos encaixar técnicas para minificar js e css, e embaralhar o seu código
+	--Separar os arquivos necessários que vão ser usados no deploy
+	--Talvez empacotar tudo em .zip ou .tar
+	--Aí você já tem que rodar várias outras ferramentas diferentes, irá criar um scrip gigante ou vai separar cada processo  em pequenas chamadas 
+	--Isso com certeza aumenta a complexidade do projeto
+>Gulp
+	*Automatizador de tarefas
+	--O GulpJs é um automatizador de tarefas que veio para ajudar na organização e execução de tarefas básicas e comuns no desenvolvimento de aplicações
+	--Ele pode automatizar qualquer tipo de chamada a ferramentas, não precisa estar relacionado ao desenvolvimento javascript
+	*Foi criado em cima do sistema de stream do nodeJS
+		*pipe
+	--Ele carrega e processa pequenas porções do código por vez
+	--Outra vantagem da utilização de streams é que você consegue ligar uma task na outra, ou seja, a saída de uma task será a entrada da outra e assim sucessivamente
+	*Como funciona
+	--Para executar uma tarefa no gulp você precisa apenas chamar elas
+		*gulp browserify
+		*gulp bundle --dev
+		*gulp
+	*Camandos básicos
+		*gulp.task
+		*gulp.src
+		*gulp.dest
+		*gulp.watch
+		*gulp.clear
+
+	*Gulp na prática!
+	
+
+
+
+
+
+
+
+
+
+
+https://github.com/AlanAguirre/gulp-presentation.git
