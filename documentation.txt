@@ -46,10 +46,9 @@ ou seja, verifica e depois transforma, então você roda ferramentas de verificar 
 		*gulp
 	*Camandos básicos
 		*gulp.task
-		*gulp.src
+		*gulp.src - globs (['client/*.js', '!client/b*.js', 'client/bad.js'])
 		*gulp.dest
 		*gulp.watch
-		*gulp.clear
 
 	*Gulp na prática!
 	

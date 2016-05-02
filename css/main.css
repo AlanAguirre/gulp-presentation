@@ -1,0 +1,37 @@
+
+html, body, #container{
+    height: 100%;
+}
+
+body {
+    font-size: 80px
+}
+
+ul{
+    margin: 10px
+}
+
+.title{
+    font-size: 125%;
+    margin: 20px
+}
+
+.item{
+    font-size: 100%
+}
+
+.subItem{
+    font-size: 50%;
+    font-weight: bold;
+}
+
+.backward{
+    font-size: 400%;
+    cursor: pointer;
+}
+
+.forward{
+    font-size: 400%;
+    cursor: pointer;
+    padding-bottom: 30px;
+}
