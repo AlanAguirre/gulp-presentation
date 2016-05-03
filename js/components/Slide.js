@@ -10,6 +10,7 @@ export const Slide = React.createClass({
         animate: React.PropTypes.string,
         items: React.PropTypes.arrayOf(React.PropTypes.shape({
             item: React.PropTypes.string,
+            link: React.PropTypes.string,
             subItems: React.PropTypes.arrayOf(React.PropTypes.string)
         }))
     },
@@ -24,10 +25,9 @@ export const Slide = React.createClass({
 
         if(this.props.title && !this.props.items){
 
-            const styleTitle = Object.assign({}, style, {fontSize: "150%", alignItems: "center", position: "absolute",
-                top: "50%", left: "50%", transform: "translateX(-50%) translateY(-50%)", textAlign: "center"})
+            const styleTitle = Object.assign({}, style, {fontSize: "150%", alignSelf: "center", textAlign: "center", width: "100%"})
 
-            return <div key={this.props.key} style={styleTitle}>
+            return <div key={this.props.key} style={styleTitle} className={this.props.animate}>
                 <h1 style={{margin: 20}} >
                     {this.props.title}
                 </h1>
@@ -50,8 +50,11 @@ export const Slide = React.createClass({
 
                     return <div key={index}>
                         <span className="item">
-                            {item.item}
+                           {" - "} {item.item}
                         </span>
+                        {item.link &&
+                            <a className="subItem" href={item.link}>{item.link}</a>
+                        }
                         {item.subItems &&
                         <ul>
                             {item.subItems.map((subItem, subIndex)=> {

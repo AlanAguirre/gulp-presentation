@@ -51,7 +51,42 @@ ou seja, verifica e depois transforma, então você roda ferramentas de verificar 
 		*gulp.watch
 
 	*Gulp na prática!
-	
+
+
+	Instalação
+
+	Comandos básicos
+		*gulp.src
+			como funciona o "globs" (['client/*.js', '!client/b*.js', 'client/bad.js'])
+			lê o arquivo e transforma em stream
+
+		*gulp.dest
+			pega as streams e salva o arquivo em disco
+
+		*gulp.task
+			Como funciona
+			Declaração
+			Ordem de execução
+			Como resolver o problema de rodar tarefas em sequencia
+
+		*gulp.watch
+			verifica constantemente os arquivos
+
+	Como executa tasks
+		Chamando 1 task
+		Chamando várias tasks
+		Passando argumentos
+
+	Plugins uteis
+		gulp-strip-debug
+		gulp-if
+		gulp-util
+
+
+	Overview do gulpfile e criando um ambiente básico para desenvolvimento
+		Eslint
+		Browserify/Webpack
+		Browsersync
 
 
 

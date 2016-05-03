@@ -5,17 +5,16 @@ var babelify = require('babelify');
 var source = require('vinyl-source-stream');
 var uglify = require('gulp-uglify');
 var path = require('path');
-var extend = require('gulp-extend');
 var buffer = require('vinyl-buffer');
 var browserSync = require('browser-sync').create();
 var eslint = require('gulp-eslint');
 var pluginReact = require('eslint-plugin-react');
-var gulpMerge = require('gulp-merge');
 var historyApiFallback = require('connect-history-api-fallback');
 var stripDebug = require('gulp-strip-debug');
 var argv = require('yargs').argv;
 var gulpif = require('gulp-if');
 var del = require('del');
+var runSequence = require('run-sequence');
 
 var DEFAULT_PATH = "build";
 
@@ -95,7 +94,12 @@ gulp.task('clean', function() {
 });
 
 gulp.task('build', ['eslint', 'browserify', 'package', 'watch'], function(){
+
 });
+
+/*gulp.task('build', function(callback){
+    return runSequence('eslint', 'browserify', 'package', 'watch', callback);
+});*/
 
 gulp.task('browserSync', ['build'], function() {
     browserSync.init([
